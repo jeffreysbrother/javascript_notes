@@ -54,3 +54,10 @@ function Person() {
 
 var john = new Person();
 console.log(john);
+
+//constructor functions were only implemented to try to appease programmers coming from other languages
+//make sure you're using them properly
+//1. a function intended to be a constructor function should use a capital letter for its name
+//2. must also use the new keyword
+//you can use a linter to warn you about these mistakes
+//constructor functions are likely going to be superceded in the future
