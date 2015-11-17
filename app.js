@@ -89,3 +89,17 @@ lacey.lastname = 'Junior';
 // console.log(lacey);
 
 lacey.greet();
+
+
+
+//--------------------------------------------------------//
+//in other programming languages, a class is not an object
+//it's a definition or template.
+//in ES6, JavaScript's classes are different than the usual conception
+//of classes
+  //the class IS an object in JavaScript version ES6
+//the author suggests to appreciate prototypal inheritance instead of
+//trying to mimic other programming languages.
+  //"extends" keyword used when using classes in ES6
+//just syntactic sugar...a different way to type something that doesn't
+//actually change the way it works under the hood.
