@@ -75,20 +75,19 @@
 //embrace that JavaScript has prototypal inheritance
 //Object.create : pure prototypal inheritance
 
-var person = {
-  firstname: 'default',
-  lastname: 'default',
-  greet: function() {
-    console.log('Hi ' + this.firstname);
-  }
-};
-
-var lacey = Object.create(person);
-lacey.firstname = 'Lacey';
-lacey.lastname = 'Junior';
-// console.log(lacey);
-
-lacey.greet();
+// var person = {
+//   firstname: 'default',
+//   lastname: 'default',
+//   greet: function() {
+//     console.log('Hi ' + this.firstname);
+//   }
+// };
+//
+// var lacey = Object.create(person);
+// lacey.firstname = 'Lacey';
+// lacey.lastname = 'Junior';
+//
+// lacey.greet();
 
 
 
@@ -103,3 +102,50 @@ lacey.greet();
   //"extends" keyword used when using classes in ES6
 //just syntactic sugar...a different way to type something that doesn't
 //actually change the way it works under the hood.
+
+
+//--------------------------------------------------------//
+//CLOSURES in JavaScript
+//a vital concept
+//notoriously difficult to understand
+
+function greet(whattosay) {
+
+  return function(name) {
+    console.log(whattosay + ' ' + name);
+  };
+
+}
+
+// greet("hiii")("james");
+
+var sayHi = greet("Hi");
+//most expect the greet function to be gone
+//at this point, (it's popped off the stack) but the
+//memory space is not cleared.
+//the whattosay variable is still available
+sayHi("Tony");
+
+//the execution context "closes in" its outer variables
+//this is called a closure
+
+//closures are simply a feature of the JS programming languages
+//they just happen.
+
+//it doesn't matter when we invoke a function
+//we don't have to worry if its outer environments are still
+//running.
+//
+
+
+
+
+
+
+
+
+
+
+
+
+//sdf
