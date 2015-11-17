@@ -138,10 +138,43 @@ sayHi("Tony");
 //
 
 
+//--------------------------------------------------------//
+//functional programming in JavaScript
+//first-class functions: functions that behave as objects
+  //can pass them as parameters, return from other functions
 
+//thinking and coding in terms of functions
+//an entirely different way of thinking
+//can't do this stuff without first-class functions
 
+    function mapForEach(arr, fn) {
 
+      var newArr = [];
+      for (var i=0; i < arr1.length; i++) {
+        newArr.push(
+          fn(arr[i])
+        );
+      }
 
+      return newArr;
+
+    }
+
+    //print original array
+    var arr1 = [1, 2, 3];
+    console.log(arr1);
+
+    //create second array
+    var arr2 = mapForEach(arr1, function(item) {
+      return item * 2;
+    });
+    console.log(arr2);
+
+    //create third array
+    var arr3 = mapForEach(arr1, function(item) {
+      return item > 2;
+    });
+    console.log(arr3);
 
 
 
